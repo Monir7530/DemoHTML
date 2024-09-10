@@ -1,0 +1,624 @@
+* { margin: 0; padding: 0; }
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+/*---- heading tags ----*/
+.bbopc_wrapper,
+.bbopc_wrapper p {
+	color: #7B8EAE;
+	font-size: 18px;
+	line-height: 1.2;	
+	font-family: "Open Sans", sans-serif;
+}
+.bbopc_wrapper p {
+	margin-bottom: 25px;
+}
+.bbopc_wrapper h1, 
+.bbopc_wrapper h2, 
+.bbopc_wrapper h3, 
+.bbopc_wrapper h4, 
+.bbopc_wrapper h5, 
+.bbopc_wrapper h6 {
+	color: #1E4992;
+	line-height: 1.3;
+	margin-bottom: 20px;
+    font-weight: 700;
+	font-family: "Open Sans", sans-serif;
+}
+.bbopc_wrapper h1 { 
+	font-size: 48px;
+	line-height: 1.25;
+}
+.bbopc_wrapper h2 { 
+	font-size: 40px;
+}
+.bbopc_wrapper h3 { 
+	font-size: 36px;
+}
+.bbopc_wrapper h4 { 
+	font-size: 32px;
+}
+.bbopc_wrapper h5 { 
+	font-size: 22px;
+}
+.bbopc_wrapper h6 { 
+	font-size: 16px;
+}
+
+/*---- page style ----*/
+.bbopc-head {
+	border-bottom: 1px solid rgb(228,216,195);
+}
+a.bbopc_head_btn {
+    color: #7B8EAE;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+}
+.bbopc-head-wrap {
+	display: flex;
+	justify-content: space-between;
+	padding: 15px;
+	max-width: 1330px;
+	margin: 0 auto;
+}
+#bbopc_wrapper {
+	display: flex;
+	flex-wrap: wrap;
+}
+.bbopc_forms {
+	background-color: rgba(230, 232, 236, 0.30);;
+}
+.bbopc_forms, 
+.bbopc_summary {
+	width: 50%;
+}
+.bbopc_col {
+	max-width: 710px;
+	width: 100%;
+	padding: 80px 60px;
+}
+.bbopc_forms .bbopc_col {
+	float: right;
+}
+.bbopc_form_col {
+    padding: 50px 0 30px;
+    border-bottom: 1px solid #BBC7DB;
+}
+.bbopc_form_col.bbopc_fc_1 { padding-top: 0; }
+.bbopc_form_col.hidden .bbopc_form_col_wrap {
+/*    display: none;*/
+}
+.bbopc_forms .bbopc-steps-progress {
+	display: none;
+}
+.accdr_title {
+	cursor: pointer;
+}
+.form-grp-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.label-opt label {
+    color: #1E4992;
+    font-style: italic;
+    font-size: 13px;
+    top: -1px;
+    position: relative;
+}
+.form-grp-label .label-title {
+    display: flex;
+    align-items: center;    
+}
+.form-grp-label h5 {
+	margin-bottom: 0;
+	padding: 0 10px;
+}
+.form-grp-label p {
+	margin: 0;
+	padding: 0;
+}
+.bbopc-field-grp {
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: space-between;
+}
+.bbopc-field-grp {
+	margin-left: -10px;
+    margin-right: -10px;
+}
+.bbopc-field-grp.credit_card {
+	margin: 0 !important;
+	padding-bottom: 32px;
+}
+.bbopc-field-grp .text-field {
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.text-field {
+    padding-bottom: 32px;
+    position: relative;
+}
+.text-field label {
+    font-size: 16px;
+    color: #7B8EAE;
+    display: block;
+    /* padding-bottom: 10px; */
+    position: absolute;
+    left: 20px;
+    top: 19px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+}
+.text-field.typing label {
+    top: 6px;
+    left: 16px;
+    font-size: 13px;
+    opacity: 1;
+    visibility: visible;
+}
+.bbopc-field-grp .text-field label {
+    left: 27px;
+}
+.text-field.typing select,
+.text-field.typing input:not([type="date"]) {
+	padding-top: 10px;
+}
+.text-field select,
+.text-field textarea, 
+.text-field input {
+    background-color: #fff; 
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    font-size: 18px;
+    color: #7B8EAE;
+    border-radius: 0;
+    border: 1px solid #BBC7DB;
+    outline: none;
+    padding: 0 30px 0 15px;
+    resize: none;
+    font-family: "Open Sans", sans-serif;
+    transition: padding 0.2s ease;
+}
+.text-field input[type="date"] {
+	width: 100% !important;
+}
+.text-field.typing input::placeholder {
+    opacity: 0;
+}
+.text-field textarea::-webkit-input-placeholder,
+.text-field input::-webkit-input-placeholder { 
+	color: #7B8EAE !important; 
+	opacity: 1 !important; 
+}
+.text-field textarea::-moz-placeholder,
+.text-field input::-moz-placeholder { 
+	color: #7B8EAE !important; 
+	opacity: 1 !important; 
+}
+.text-field textarea::-ms-input-placeholder,
+.text-field input::-ms-input-placeholder { 
+	color: #7B8EAE !important; 
+	opacity: 1 !important; 
+}
+
+/* custom radio */
+.radio-item {
+    margin-bottom: 30px;
+    border: 1px solid #BBC7DB;
+}
+.radio-item input[type=radio] { display:none; }
+.radio-item input[type=radio] + label {
+	position: relative;
+	padding: 10px 20px 10px 38px;
+	cursor: pointer;
+	display: flex;
+    justify-content: space-between;
+    background: #fff;
+    align-items: center;
+}
+.radio-item input[type=radio] + label:before {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    left: 12px;
+    top: 11px;
+    cursor: pointer;
+    border: 1px solid #7B8EAE;
+    border-radius: 50%;
+}
+.radio-item input[type=radio]:checked + label:before {
+	background: #7B8EAE;
+	border: none;
+}
+.radio-item input[type=radio]:checked + label:after {
+    content: " ";
+    width: 10.5px;
+    height: 10.5px;
+    display: block;
+    position: absolute;
+    left: 17px;
+    top: 16px;
+    background: #fff;
+    border-radius: 50%;
+}
+.radio-item-msg {
+    font-size: 15px !important;
+    margin-top: -10px;
+}
+
+.addr-fields .text-field {
+	width: 42%;
+}
+.addr-fields .addr_state {
+	width: 26%;
+}
+.addr-fields .addr_zip {
+	width: 32%;
+}
+.bbopc-field-grp.credit_card .text-field {
+	width: 50% !important;
+	padding: 0 !important;
+}
+.bbopc-field-grp .text-field.card_num {
+	width: 100% !important;
+}
+.inp_info {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding-top: 10px;
+    gap: 5px;
+}
+.bbopc_forms img.cardimg {
+    padding: 0 5px;
+}
+.bbopc-field-grp .text-field.card_num input {
+	border-bottom: none;
+}
+.credit_card .cc_exp input {
+	border-right: none;
+}
+.credit_card .text-field label {
+	left: 16px;
+}
+.credit_card .label-opt {
+    padding-top: 8px;
+}
+.credit_card .card_num:after,
+.c_visa:after {
+    position: absolute;
+    right: 0;
+    top: 18px;
+    content: '';    
+    width: 80px;
+    height: 20px;
+}
+.c_visa:after {
+	background: url( assets/images/c_visa.svg ) no-repeat right 35px center;
+}
+.c_mastercard:after {
+	background: url( assets/images/c_mastercard.svg ) no-repeat right 35px center;
+}
+.c_amex:after {
+	background: url( assets/images/c_amex.svg ) no-repeat right 35px center;
+}
+.c_discover:after {
+	background: url( assets/images/c_discover.svg ) no-repeat right 35px center;
+}
+.billing_fields .addr-fields {
+	margin-bottom: -24px;
+}
+.label-opt.sameasprev {    
+    position: relative;
+    z-index: 1;
+}
+.text-field.inp_ok:before {
+    background: url( assets/images/check_complete_icon.svg ) no-repeat;
+    background-size: 21px;
+    position: absolute;
+    right: 8px;
+    top: 18px;
+    content: '';
+    width: 21px;
+    height: 21px;
+}
+.bbopc-field-grp .text-field.inp_ok:before { right: 18px; }
+.bbopc-field-grp.credit_card .inp_ok:before { 
+	right: 8px !important; 
+}
+.text-field input:-webkit-autofill {
+  -webkit-text-fill-color: #7B8EAE;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+/* summary column */
+.bbopc_summary_items { padding-bottom: 60px; }
+.bbopc_prdt_item {
+	display: flex;
+    /* flex-wrap: wrap;*/
+    align-items: center;
+    justify-content: space-between;
+	padding: 30px 0 30px;
+	border-bottom: 1px solid #BBC7DB;
+}
+.bbunit_prdt {
+    display: flex;
+    align-items: center;
+}
+.bbopc_pimg img {
+    width: 76px;
+    margin-right: 15px;
+}
+.bbopc_picon {
+    display: flex;
+    align-items: center;
+}
+.bbopc_pinfo span {
+    font-size: 22px;
+    color: #1E4992;
+    font-weight: 700;
+    margin-right: 5px;
+    padding-bottom: 8px;
+}
+.bbopc_pinfo img {
+    width: 17.02px;
+}
+.promo-item span {
+    display: inline-block;
+    font-size: 12px;
+    font-style: italic;
+}
+.promo-item {
+	margin-bottom: 15px;
+	text-align: right;
+}
+.promo-item p {
+	margin: 0;
+}
+.billing_fields.hidden,
+.bbopc_prdt_item.hidden { display: none; }
+
+/* billing due */
+.bbopc_totalduebb {
+	padding-top: 20px;
+}
+.totalduesinfobox {
+    margin: 20px 0;
+    padding-top: 35px;
+}
+.tdueinfoflex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+.tdueinfoflex p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #1e4992;
+    line-height: 1.4;
+    margin: 0px;
+    padding-bottom: 10px;
+}
+.bbopc_btn,
+.bbopc_submit {
+    background: #fc5413;
+    mix-blend-mode: normal;
+    height: 50px;
+    line-height: 50px;
+    border: 1.2px solid #fc5413;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    margin-top: 50px;
+    font-family: "Open Sans", sans-serif;
+}
+.bbopc_btn {
+	display: inline-block;
+	width: auto;
+	padding: 0 30px;
+	margin: 0;
+}
+.bbopc_submit.disabled {
+    pointer-events: none;
+    background-color: #7B8EAE;
+    border-color: #7B8EAE;
+    cursor: not-allowed;
+}
+.bbopc-checkout-info {
+    text-align: center;
+    max-width: 470px;
+    margin: 40px auto 0;
+}
+.bbopc-checkout-info h5.safe_checkout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    gap: 8px;
+}
+
+/* progress steps bar */
+.bbopc-steps-progress {
+    position: relative;
+    padding: 15px 0 50px;
+}
+span.step_line {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    height: 2px;
+    background: #E6E8EC;
+    width: 100%;
+}
+.bbl-steps {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 0 -5px;
+}
+.bbl-steps span {
+    background: #fff;
+    z-index: 1;
+    padding: 0 5px;
+}
+.bbopc_forms .bbl-steps span {
+	background: transparent;
+	text-align: center;
+}
+.bbl-steps span small {
+    font-size: 14px;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    background: #7B8EAE;
+    border-radius: 50%;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4px;
+}
+.bbl-steps span.bbl_completed small,
+.bbl-steps span.bbl_active small {
+    text-indent: -99999px;
+    background: #1E4992 url(assets/images/check.svg) no-repeat center;
+}
+.bbl-steps span.bbl_completed small {
+	background-color: #169A4B;
+}
+.bbopc_form_col.bbopc_inputs_filled .accdr_title {
+	background: url( assets/images/edit_icon.svg ) no-repeat right 4px center;
+	background-size: 21px;
+}
+.bbopc_fc_4 {
+	border-bottom: none;
+}
+.bill_fixed {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    max-width: 1420px;
+    width: 100%;
+}
+.bill_fixed .bbopc_totalduebb {
+	width: calc(50% - 120px );
+}
+
+
+/* Responsive */
+@media screen and ( max-width: 1220px ) {
+	.bbopc_col {
+		padding: 70px 30px;
+	}
+	.bill_fixed .bbopc_totalduebb {
+		width: calc(50% - 60px );
+	}
+	.text-field select, 
+	.text-field textarea, 
+	.text-field input,
+	.text-field label,
+	.bbopc_wrapper, .bbopc_wrapper p {
+		font-size: 16px;
+	}
+	.bbopc_wrapper h1 { 
+		font-size: 36px;
+	}
+	.bbopc_wrapper h2 { 
+		font-size: 32px;
+	}
+	.bbopc_wrapper h3 { 
+		font-size: 28px;
+	}
+	.bbopc_wrapper h4 { 
+		font-size: 24px;
+	}
+	.bbopc_wrapper h5 { 
+		font-size: 20px;
+	}
+	.bbopc_pinfo span {
+		font-size: 18px;
+	}
+}
+@media screen and ( max-width: 991px ) {
+	.bbopc_forms, .bbopc_summary {
+		width: 100%;
+	}
+	.bbopc_col {
+		max-width: 100%;
+		float: none;
+	}
+	.bbopc_forms .bbopc-steps-progress {
+		display: block;
+		padding: 14px 0 13px;
+		border-top: 1px solid #BBC7DB;
+		border-bottom: 1px solid #BBC7DB;
+	}
+	.bbopc_summary .bbopc-steps-progress {
+		display: none;
+	}
+	.bbopc_form_col {
+		padding: 40px 0 18px !important;
+	}
+	.bbopc_totalduebb {
+		padding-top: 0;
+	}
+	.bill_fixed {
+		position: static !important;
+	}
+	.bbopc_totalduebb { width: 100% !important; }
+}
+@media screen and ( max-width: 580px ) {
+	.bbopc_col {
+		padding: 55px 15px 40px;
+	}
+	.text-field.mbw_100 {
+		width: 100% !important;
+	}
+	.text-field.mbw_50 {
+		width: 50% !important;
+	}
+	.text-field.mbw_33 {
+		width: 33.333% !important;
+	}
+	.bbopc_wrapper h2 {
+		font-size: 27px;
+	}
+	.bbopc_wrapper h3 {
+		font-size: 25px;
+	}
+	.bbopc_wrapper h5 {
+		font-size: 18px;
+	}
+	.bbopc_forms .bbl-steps span span {
+		display: block;
+		padding-top: 3px;
+		font-size: 12px;
+	}
+	.text-field select, .text-field textarea, .text-field input {
+		padding: 0 30px 0 12px;
+	}
+	.bbopc_btn {
+		font-size: 14px;
+		height: 44px;
+  		line-height: 44px;
+		padding: 0 12px;
+	}
+}

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" >
+	<title>One Page Checkout</title>
+	<link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
+</head>
+<body>
+
+	<div class="bbopc-head">
+		<div class="bbopc-head-wrap">
+			<img class="logo" src="assets/images/header__logo.svg" alt="">
+			<a href="#" class="bbopc_head_btn">< Return to Location</a>
+		</div>		
+	</div>
+
+	<div id="bbopc_wrapper" class="bbopc_wrapper">
+		<div class="bbopc_forms"> <!-- start form column -->
+			<div class="bbopc_col">
+
+				<!-- step progress bar -->
+				<div class="bbopc-steps-progress">
+                    <div class="bbl-steps">
+                        <span class="bbl_step_1 bbl_active"><small>1</small><span>Tenant Info</span></span>
+                        <span class="bbl_step_2"><small>2</small><span>Move-in Date</span></span>
+                        <span class="bbl_step_3"><small>3</small><span>Insurance Info</span></span>
+                        <span class="bbl_step_4"><small>4</small><span>Payment Info</span></span>
+                    </div>
+                </div>
+                
+                
+				<!-- form input group 1 -->
+				<div class="bbopc_form_col bbopc_fc_1">
+					<h4 class="accdr_title">Tenant Information</h4>
+					<div class="bbopc_form_col_wrap">
+
+						<div class="bbopc-field-grp">
+						   <div class="text-field mbw_100">
+						      <label for="fname">First Name</label>
+						      <input class="bbopc_inputf" type="text" id="fname" autocomplete="off" placeholder="First Name">
+						   </div>
+						   <div class="text-field mbw_100">
+						      <label for="lname">Last Name</label>
+						      <input class="bbopc_inputf" type="text" id="lname" autocomplete="off" placeholder="Last Name">
+						   </div>
+						</div>
+					   	<div class="text-field">
+					      	<label for="address">Street Address</label>
+					      	<input class="bbopc_inputf" type="text" id="address" autocomplete="off" placeholder="Street Address">
+					   	</div>
+
+					   	<div class="bbopc-field-grp addr-fields">
+						   <div class="text-field mbw_33">
+						      <label for="city">City</label>
+						      <input class="bbopc_inputf" type="text" id="city" autocomplete="off" placeholder="City">
+						   </div>
+						   <div class="text-field addr_state mbw_33">
+						      	<label for="state">State</label>
+								<select class="bbopc_inputf" id="state" class="select">
+								  <option value="">State</option>
+								  <option value="case1">Florida</option>
+								  <option value="case1">Alaska</option>
+								  <option value="case2">Arizona</option>
+								  <option value="case3">Arkansas</option>
+								  <option value="case4">California</option>
+								</select>
+						   </div>
+						   <div class="text-field addr_zip mbw_33">
+						      <label for="zip">Zip Code</label>
+						      <input class="bbopc_inputf" type="text" id="zip" autocomplete="off" placeholder="Zip">
+						   </div>
+						</div>
+
+						<div class="bbopc-field-grp">
+						   <div class="text-field mbw_100">
+						      	<label for="email">Email Address</label>
+						      	<input class="bbopc_inputf" type="text" id="email" autocomplete="off" placeholder="Email Address">
+						      	<div class="inp_info">
+							      	<span><img src="assets/images/checkmark_fill_icon.svg" alt=""></span>
+							      	<span>Opt in to Receive Emails</span> 
+							      	<span><img src="assets/images/info_icon.svg" alt=""></span>
+						      	</div>
+						   </div>
+						   <div class="text-field mbw_100">
+						      	<label for="phone">Phone Number</label>
+						      	<input class="bbopc_inputf" type="text" id="phone" autocomplete="off" maxlength="14" placeholder="Phone Number">
+						      	<div class="inp_info">
+							      	<span><img src="assets/images/checkmark_fill_icon.svg" alt=""></span>
+							      	<span>Opt in to Receive Emails</span> 
+							      	<span><img src="assets/images/info_icon.svg" alt=""></span>
+						      	</div>
+						   </div>
+						</div>
+					</div>
+				</div> 
+				<!-- //end form input group 1 -->
+
+
+
+				<!-- form input group 2 -->
+				<div class="bbopc_form_col bbopc_fc_2 hidden">
+					<h4 class="accdr_title">Select Move-in Date</h4>
+					<div class="bbopc_form_col_wrap">
+
+						<div class="text-field">
+					      	<input class="bbopc_inputf" id="datepicker" type="date" autocomplete="off" placeholder="Smith">
+					   	</div>
+				   	</div>
+				</div>
+				<!-- form input group 2 -->
+
+
+
+				<!-- form input group 3 -->
+				<div class="bbopc_form_col bbopc_fc_3 hidden">
+					<h4 class="accdr_title">Protect Your Belongings</h4>
+
+					<div class="bbopc_form_col_wrap">
+						<div class="radio-item">
+							<input class="bbopc_inputf" id="check5" type="radio" name="radio">
+							<label for="check5"><span class="radio_cover">Covers Up to $2000</span> <span class="radio_mo">$12/month</span></label>
+						</div>
+						<div class="radio-item">
+							<input class="bbopc_inputf" id="check6" type="radio" name="radio">
+							<label for="check6"><span class="radio_cover">Covers Up to $3000</span> <span class="radio_mo">$15/month</span></label>
+						</div>
+						<div class="radio-item">
+							<input class="bbopc_inputf" id="check7" type="radio" name="radio">
+							<label for="check7"><span class="radio_cover">Covers Up to $5000</span> <span class="radio_mo">$17/month</span></label>
+						</div>
+
+						<p class="radio-item-msg"><small>*You must choose one of these options. You may opt to provide proof of your insurance when you move in. At that time, we will remove this fee from your account.</small></p>
+					</div>
+				</div>
+				<!-- //end form input group 3 -->
+
+
+				<!-- form input group 4 -->
+				<div class="bbopc_form_col bbopc_fc_4 hidden">
+					<h4 class="accdr_title">Payment Information</h4>
+					<div class="bbopc_form_col_wrap">
+
+					   <div class="text-field">
+					      <label for="cfname">Name on Card</label>
+					      <input class="bbopc_inputf" type="text" id="cfname" autocomplete="off" placeholder="Name on Card">
+					   </div>
+
+						<!-- <div class="form-grp-label">
+							<div class="label-title">
+								<img src="assets/images/card_icon.svg" alt="">
+								<h5>Credit Card Information</h5>
+								<img src="assets/images/visacard.svg" alt="" class="cardimg">
+								<img src="assets/images/mastercard.svg" alt="" class="cardimg">
+								<img src="assets/images/discovercard.svg" alt="" class="cardimg">
+								<img src="assets/images/am_ex.svg" alt="" class="cardimg">
+							</div>
+						</div> -->
+
+						<div class="bbopc-field-grp credit_card">
+						   <div class="text-field card_num mbw_100">
+						      	<label for="ccard">Credit Card Number</label>
+						      	<input class="bbopc_inputf" type="text" id="ccard" autocomplete="off" placeholder="Credit Card Number">
+						    </div>
+						   	<div class="text-field cc_exp mbw_50">
+						      <label for="expd">Expiration Date</label>
+						      <input class="bbopc_inputf" type="text" id="expd" autocomplete="off" placeholder="Expiration Date">
+						   	</div>
+						   	<div class="text-field cc_cvv mbw_50">
+						      <label for="cvv">CVV</label>
+						      <input class="bbopc_inputf" type="text" id="cvv" placeholder="CVC">						      
+						   	</div>
+						   	<div class="label-opt">
+								<input id="saveCardInfo" class="bbopc_inputf" type="checkbox" name="savecard" checked>
+								<label for="saveCardInfo">Save my card for automatic payment</label>
+							</div>
+						</div>						
+
+						<div class="billing_fields hidden">
+						   	<div class="text-field">
+						      	<label for="billing-address">Street Address</label>
+						      	<input  class="bbopc_inputf" type="text" id="billing-address" autocomplete="off" placeholder="Billing Street Address">
+						   	</div>
+
+						   	<div class="bbopc-field-grp addr-fields">
+							   <div class="text-field mbw_33">
+							      	<label for="billing-city">City</label>
+							      	<input class="bbopc_inputf" type="text" id="billing-city" autocomplete="off" placeholder="City">
+							    </div>
+							    <div class="text-field addr_state mbw_33">
+							      	<label for="billing-state">State</label>
+									<select class="bbopc_inputf" id="billing-state" class="select">
+									  <option value="">State</option>
+									  <option value="case1">Florida</option>
+									  <option value="case1">Alaska</option>
+									  <option value="case2">Arizona</option>
+									  <option value="case3">Arkansas</option>
+									  <option value="case4">California</option>
+									</select>
+							   	</div>
+							   	<div class="text-field addr_zip mbw_33">
+							      <label for="billing-zip">Zip Code</label>
+							      <input class="bbopc_inputf" type="text" id="billing-zip" autocomplete="off" placeholder="Zip">
+							   	</div>
+							</div>
+						</div>
+
+						<div class="form-grp-label">
+							<!-- <div class="label-title">
+								<img src="assets/images/location_icon.svg" alt="">
+								<h5>Billing Address</h5>
+							</div> -->
+							<div class="label-opt sameasprev">
+								<input id="sameAsPrevious" class="bbopc_inputf" type="checkbox" name="billcb" checked>
+								<label for="sameAsPrevious">Billing Address Same as Above Address</label>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+				<!-- //end form input group 4 -->
+				
+
+			</div>
+		</div><!-- //end form column -->
+
+		<div class="bbopc_summary"> <!-- start summary column -->
+			<div class="bbopc_col">
+
+				<!-- step progress bar -->
+				<div class="bbopc-steps-progress">
+					<span class="step_line"></span>
+                    <div class="bbl-steps">
+                        <span class="bbl_step_1 bbl_active"><small>1</small>Tenant Info</span>
+                        <span class="bbl_step_2"><small>2</small>Move-in Date</span>
+                        <span class="bbl_step_3"><small>3</small>Insurance Info</span>
+                        <span class="bbl_step_4"><small>4</small>Payment Info</span>
+                    </div>
+                </div>
+
+				<h2>Unit Information</h2>
+
+				<div class="bbopc_summary_items">
+
+					<div class="bbopc_prdt_item">
+						<div class="bbunit_prdt">
+							<div class="bbopc_pimg">
+						      <img src="assets/images/Calgary-Location-Image.jpg" alt="">
+						   	</div>
+						   	<div class="bbopc_pinfo">
+						      	<div class="bbopc_picon">
+						         	<span>Calgary Dufferin Blvd</span>
+						         	<a href="#"><img src="assets/images/edit_icon.svg" alt=""></a>
+						      	</div>
+						      	<div>
+						         	<p>5411 Dufferin Blvd SE <br> Calgary, AB</p>
+						      	</div>
+						   	</div>
+						</div>
+					</div>
+
+					<div class="bbopc_prdt_item">
+						<div class="bbunit_prdt">
+							<div class="bbopc_pimg">
+						      <img src="assets/images/Rendering_10x10.jpg" alt="">
+						   	</div>
+						   	<div class="bbopc_pinfo">
+						      	<div class="bbopc_picon">
+						         	<span>10’x10’</span>
+						         	<a href="#"><img src="assets/images/edit_icon.svg" alt=""></a>
+						      	</div>
+						      	<div>
+						         	<p>Ground Floor <br> Heated</p>
+						      	</div>
+						   	</div>
+						</div>
+					   
+					   	<div class="promo-period">
+					   		<div class="promo-item">
+					   			<span>promo period</span>
+					   			<p>$50/month</p>
+					   		</div>
+					   		<div class="promo-item">
+					   			<span>after promo period</span>
+					   			<p>$100/month</p>
+					   		</div>
+					   	</div>
+					</div>
+
+					<div class="bbopc_prdt_item hidden" id="depdn_date">
+						<div class="bbunit_prdt">
+							<div class="bbopc_pimg">
+						      <img src="assets/images/moveindate.jpg" alt="">
+						   	</div>
+						   	<div class="bbopc_pinfo">
+						      	<div class="bbopc_picon">
+						         	<span>Move in Date</span>
+						         	<a href="#"><img src="assets/images/edit_icon.svg" alt=""></a>
+						      	</div>
+						      	<div>
+						         	<p id="selected_dateval">09/20/2024</p>
+						      	</div>
+						   	</div>
+						</div>
+					</div>
+
+					<div class="bbopc_prdt_item hidden" id="depdn_covers">
+						<div class="bbunit_prdt">
+							<div class="bbopc_pimg">
+						      <img src="assets/images/coverate.jpg" alt="">
+						   	</div>
+						   	<div class="bbopc_pinfo">
+						      	<div class="bbopc_picon">
+						         	<span>Coverage</span>
+						         	<a href="#"><img src="assets/images/edit_icon.svg" alt=""></a>
+						      	</div>
+						      	<div>
+						         	<p id="selected_cover">Covers up to $5,000</p>
+						      	</div>
+						   	</div>
+						</div>
+					   
+					   	<div class="promo-period">
+					   		<div class="promo-item">
+					   			<p id="selected_mo">$17/mo</p>
+					   		</div>
+					   	</div>
+					</div>
+				</div>	
+
+				<div class="bbopc_totalduebb_wrap">
+					<div class="bbopc_totalduebb">
+					   <h4>Total Due Today</h4>
+					   <div class="totalduesinfobox">
+					      <div class="tdueinfoflex">
+					         <p>First Month’s Rent</p>
+					         <p>$50.00</p>
+					      </div>
+					      <div class="tdueinfoflex">
+					         <p>Monthly Protection Plan</p>
+					         <p>$17.00</p>
+					      </div>
+					      <div class="tdueinfoflex">
+					         <p>Administration Fee (One Time)</p>
+					         <p>$20.00</p>
+					      </div>
+					      <div class="tdueinfoflex">
+					         <p>Tax</p>
+					         <p>$3.50</p>
+					      </div>
+					      <div class="tdueinfoflex">
+					         <p><b>Total Due Today</b></p>
+					         <p><b>$90.50</b></p>
+					      </div>
+					   </div>
+
+					   <a href="#" id="bbopc_submit" class="bbopc_submit disabled">Rent Unit</a>
+
+					   <div class="bbopc-checkout-info">
+					   		<p><small>All rentals include a 7 Day Risk Free Trial. If you rent the wrong size unit online, our team at the facility can refund your money and help you find the right size.</small></p>
+					   		<h6>Not Ready to Commit? RESERVE THIS UNIT, no credit card required. </h6>
+					   		<h5 class="safe_checkout">
+					   			<img src="assets/images/safe_checkout_icon.svg" alt="">
+					   			<span>Guaranteed <strong> Safe Checkout</strong></span>
+					   		</h5>
+					   </div>					   
+					</div>
+				</div>
+			</div>				
+		</div><!-- //end summary column -->
+	</div>
+	<div id="bbopc_page_end"></div>
+
+	<script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/custom.js?v=<?php echo time(); ?>"></script>
+</body>
+</html>
