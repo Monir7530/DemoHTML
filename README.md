@@ -2,4 +2,4 @@
 BlueBird One Page Checkout
 
 
-Live Link: https://monir-orbits.github.io/DemoHTML/
+Live Link: https://monirwpc.github.io/Onepage-Checkout/
